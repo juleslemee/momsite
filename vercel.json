@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/www.murielguepingallery.com/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/www.murielguepingallery.com/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+
