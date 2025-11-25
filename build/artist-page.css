@@ -1,0 +1,19 @@
+/* Artist page slider arrow styling */
+/* Ensure main page slider arrows are visible - scoped to not affect overlay */
+
+#featured-works .bx-wrapper {
+    position: relative !important;
+}
+
+#featured-works .bx-controls,
+#featured-works .bx-controls-direction {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#featured-works .bx-prev,
+#featured-works .bx-next {
+    display: block !important;
+    visibility: visible !important;
+}
