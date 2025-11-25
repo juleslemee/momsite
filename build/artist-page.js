@@ -179,7 +179,7 @@
 
                 var content = $('<div class="enlarge-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; max-height: 85%; display: flex; flex-direction: column; align-items: center;"></div>');
 
-                var img = $('<img style="max-width: 95%; max-height: 90vh; object-fit: contain;" />');
+                var img = $('<img style="max-width: 100%; max-height: 100vh; object-fit: contain;" />');
                 var caption = $('<figcaption style="margin-top: 20px; text-align: center; color: #666;"></figcaption>');
 
                 function showSlide(index) {

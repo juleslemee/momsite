@@ -1,19 +1,24 @@
-/* Artist page slider arrow styling */
+/* Artist and Exhibition page slider arrow styling */
 /* Ensure main page slider arrows are visible - scoped to not affect overlay */
 
-#featured-works .bx-wrapper {
+#featured-works .bx-wrapper,
+#selected-works .bx-wrapper {
     position: relative !important;
 }
 
 #featured-works .bx-controls,
-#featured-works .bx-controls-direction {
+#featured-works .bx-controls-direction,
+#selected-works .bx-controls,
+#selected-works .bx-controls-direction {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
 
 #featured-works .bx-prev,
-#featured-works .bx-next {
+#featured-works .bx-next,
+#selected-works .bx-prev,
+#selected-works .bx-next {
     display: block !important;
     visibility: visible !important;
 }
