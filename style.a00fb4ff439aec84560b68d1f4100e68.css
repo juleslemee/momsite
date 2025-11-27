@@ -77,6 +77,78 @@ footer span > a.footer-siteindex{
     pointer-events: none;
 }
 
+#overlay {
+    overflow: hidden;
+    padding: 5vh 0;
+    box-sizing: border-box;
+}
+
+#overlay .slide {
+    height: 90vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay .slide-wrapper {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    height: auto !important;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay figure {
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay .slide img,
+#overlay figure img,
+#overlay .enlarge-wrapper img {
+    max-height: 75vh !important;
+    max-width: 90vw !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+#overlay .enlarge-wrapper {
+    max-height: 90vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay.fullscreen {
+    overflow: hidden !important;
+}
+
+#overlay .link-back.back-link {
+    color: #b91221 !important;
+}
+
+#overlay .enlarge-content {
+    max-height: 92vh !important;
+    overflow: hidden !important;
+}
+
+#overlay .enlarge-content img {
+    max-height: 90vh !important;
+    max-width: 90vw !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
 #contentWrapper:focus {
     outline: transparent !important;
 }
