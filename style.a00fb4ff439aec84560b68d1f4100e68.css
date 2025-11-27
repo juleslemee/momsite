@@ -13,6 +13,11 @@ h2, .entries .subtitle, .grid .subtitle, .grid .titles .subtitle, .homepage .cap
 body { background: #ffffff; }
 footer { background: transparent !important; }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 *:focus:not(.focus-visible) {
     outline: none;
