@@ -73,6 +73,10 @@ footer span > a.footer-siteindex{
     overflow: hidden;
 }
 
+#supersized {
+    pointer-events: none;
+}
+
 #contentWrapper:focus {
     outline: transparent !important;
 }
