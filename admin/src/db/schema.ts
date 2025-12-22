@@ -98,6 +98,34 @@ export const exhibitionArtists = sqliteTable('exhibition_artists', {
   sortOrder: integer('sort_order').default(0),
 });
 
+// Press articles
+export const press = sqliteTable('press', {
+  id: text('id').primaryKey(), // UUID
+  title: text('title').notNull(),
+  subtitle: text('subtitle'),
+  date: text('date'), // Display date text
+  url: text('url'), // External link to press article
+  imageId: text('image_id').references(() => images.id),
+  sortOrder: integer('sort_order').default(0),
+  isEnabled: integer('is_enabled', { mode: 'boolean' }).default(true),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+  updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+// News items
+export const news = sqliteTable('news', {
+  id: text('id').primaryKey(), // UUID
+  title: text('title').notNull(),
+  subtitle: text('subtitle'),
+  date: text('date'), // Display date text
+  content: text('content'), // Rich text content
+  imageId: text('image_id').references(() => images.id),
+  sortOrder: integer('sort_order').default(0),
+  isEnabled: integer('is_enabled', { mode: 'boolean' }).default(true),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+  updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
 // Site settings (key-value store)
 export const settings = sqliteTable('settings', {
   key: text('key').primaryKey(),
@@ -181,6 +209,20 @@ export const exhibitionArtistsRelations = relations(exhibitionArtists, ({ one })
   artist: one(artists, {
     fields: [exhibitionArtists.artistId],
     references: [artists.id],
+  }),
+}));
+
+export const pressRelations = relations(press, ({ one }) => ({
+  image: one(images, {
+    fields: [press.imageId],
+    references: [images.id],
+  }),
+}));
+
+export const newsRelations = relations(news, ({ one }) => ({
+  image: one(images, {
+    fields: [news.imageId],
+    references: [images.id],
   }),
 }));
 

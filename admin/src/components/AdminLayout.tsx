@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -11,12 +12,20 @@ const sidebarLinks = [
   { href: '/', label: 'Overview' },
   { href: '/artists', label: 'Artists' },
   { href: '/exhibitions', label: 'Exhibitions' },
+  { href: '/news', label: 'News' },
+  { href: '/press', label: 'Press' },
 ];
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const isActive = (href: string) => {
+    if (!mounted) return false;
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   };
@@ -47,7 +56,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             <Link
               key={link.href}
               href={link.href}
-              className={isActive(link.href) ? 'active' : ''}
+              className={isActive(link.href) ? 'active' : undefined}
             >
               {link.label}
             </Link>
