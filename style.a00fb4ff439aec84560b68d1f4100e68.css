@@ -251,4 +251,34 @@ label.required:after {
     margin-left: 2px;
 }
 
+/* Fluid image scaling for artist pages - removes stepwise min-width */
+#featured-works .slide,
+#selected-works .slide {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#featured-works figure,
+#selected-works figure {
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+#featured-works .bx-wrapper,
+#selected-works .bx-wrapper {
+    max-width: 100% !important;
+}
+
+#featured-works .bx-viewport,
+#selected-works .bx-viewport {
+    width: 100% !important;
+}
+
+#featured-works .slide-wrapper,
+#selected-works .slide-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+}
 
